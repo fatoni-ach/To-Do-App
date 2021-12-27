@@ -9,6 +9,8 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        {{-- Package Easy Made --}}
+        <link rel="stylesheet" href="{{ asset('css/trix.css') }}">
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -40,6 +42,9 @@
         </div>
 
         @stack('modals')
+
+        <script src="{{ asset('js/trix.js') }}"></script>
+        <script src="{{ asset('js/trix-core.js') }}"></script>
 
         @livewireScripts
     </body>

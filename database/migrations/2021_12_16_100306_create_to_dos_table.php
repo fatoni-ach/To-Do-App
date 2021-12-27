@@ -17,6 +17,7 @@ class CreateToDosTable extends Migration
             $table->id();
             $table->text('description');
             $table->foreignId('user_id')->nullable()->constrained('users');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
