@@ -31,7 +31,7 @@
             <div class="w-full">
                 <div class="mt-3 text-center">
                     <h3 class="text-lg leading-6 font-medium text-gray-900">
-                        {{ __('Delete') }} {{ $value }}
+                        {{ __('Delete') }} {{ null }}
                     </h3>
                     <div class="mt-2">
                         <div class="mt-10 text-gray-700">
