@@ -25,7 +25,7 @@ class ToDoTable extends LivewireDatatable
 
     public function builder()
     {
-        return ToDo::withoutTrashed()->where('user_id', Auth::user()->id);
+        return ToDo::withoutTrashed()->where('user_id', Auth::user()->id)->orderBy('updated_at', 'desc');
     }
 
     public function columns()
