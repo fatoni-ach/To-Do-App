@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Table;
 
 use App\Models\ToDo;
+use BladeUIKit\Components\Markdown\ToC;
 use Illuminate\Support\Facades\Auth;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\DateColumn;
@@ -70,5 +71,16 @@ class ToDoTable extends LivewireDatatable
         }
 
         $this->description = $toDo->description;
+    }
+
+    public function delete($id)
+    {
+        $toDo = ToDo::find($id);
+
+        if(!$toDo->isValid()){
+            return abort(404);
+        }
+
+        $toDo->delete();
     }
 }
