@@ -9,13 +9,11 @@
         "blade-ui-kit/blade-ui-kit": "^0.3.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "itsgoingd/clockwork": "^5.1",
         "laravel/framework": "^8.65",
         "laravel/jetstream": "^2.5",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.5",
-        "mediconesystems/livewire-datatables": "^0.6.8"
+        "livewire/livewire": "^2.5"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
