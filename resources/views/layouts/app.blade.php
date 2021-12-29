@@ -17,6 +17,10 @@
 
         @livewireStyles
 
+        <!-- Wire UI Scripts and AlpineJs -->
+        @wireUiScripts
+        <script src="//unpkg.com/alpinejs"></script>
+
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
