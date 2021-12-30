@@ -27,3 +27,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::get('/', ToDo::class)->name('to-do.index');
     });
 });
+
+Route::view('/powergrid', 'powergrid-demo');
