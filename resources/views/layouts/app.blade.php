@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         @livewireStyles
+        @powerGridStyles
 
         <!-- Wire UI Scripts and AlpineJs -->
         @wireUiScripts
@@ -51,5 +52,6 @@
         <script src="{{ asset('js/trix-core.js') }}"></script>
 
         @livewireScripts
+        @powerGridScripts
     </body>
 </html>
