@@ -22,15 +22,12 @@ final class ToDoTable extends PowerGridComponent
     //Messages informing success/error data is updated.
     public bool $showUpdateMessages = true;
 
-
     //Show Per Page
-    public array $perPageValues = [5, 10, 25, 50, 100];
-
+    public array $perPageValues = [10, 25, 50, 100];
 
     protected $listeners = [
-        'data-added' => 'refreshData' 
+        'data-changed'  => 'refreshData',
     ];
-
 
     /*
     |--------------------------------------------------------------------------
@@ -111,6 +108,7 @@ final class ToDoTable extends PowerGridComponent
      *
      * @return array<int, Column>
      */
+
     public function columns(): array
     {
         return [
@@ -158,23 +156,20 @@ final class ToDoTable extends PowerGridComponent
      * @return array<int, \PowerComponents\LivewirePowerGrid\Button>
      */
 
-    /*
     public function actions(): array
     {
-    return [
-    Button::add('edit')
-    ->caption('Edit')
-    ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
-    ->route('to-do.edit', ['to-do' => 'id']),
+        return [
+            Button::add('edit')
+                ->caption(__('Edit'))
+                ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
+                ->emit('edit', ['id' => 'id']),
 
-    Button::add('destroy')
-    ->caption('Delete')
-    ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')
-    ->route('to-do.destroy', ['to-do' => 'id'])
-    ->method('delete')
-    ];
+            Button::add('destroy')
+                ->caption(__('Delete'))
+                ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')
+                ->emit('delete', ['id' => 'id']),
+        ];
     }
-     */
 
     /*
     |--------------------------------------------------------------------------
@@ -192,45 +187,78 @@ final class ToDoTable extends PowerGridComponent
      */
 
     /*
-public function update(array $data ): bool
-{
-try {
-$updated = ToDo::query()->findOrFail($data['id'])
-->update([
-$data['field'] => $data['value'],
-]);
-} catch (QueryException $exception) {
-$updated = false;
-}
-return $updated;
-}
+    public function update(array $data ): bool
+    {
+    try {
+    $updated = ToDo::query()->findOrFail($data['id'])
+    ->update([
+    $data['field'] => $data['value'],
+    ]);
+    } catch (QueryException $exception) {
+    $updated = false;
+    }
+    return $updated;
+    }
 
-public function updateMessages(string $status = 'error', string $field = '_default_message'): string
-{
-$updateMessages = [
-'success'   => [
-'_default_message' => __('Data has been updated successfully!'),
-//'custom_field'   => __('Custom Field updated successfully!'),
-],
-'error' => [
-'_default_message' => __('Error updating the data.'),
-//'custom_field'   => __('Error updating custom field.'),
-]
-];
+    public function updateMessages(string $status = 'error', string $field = '_default_message'): string
+    {
+    $updateMessages = [
+    'success'   => [
+    '_default_message' => __('Data has been updated successfully!'),
+    //'custom_field'   => __('Custom Field updated successfully!'),
+    ],
+    'error' => [
+    '_default_message' => __('Error updating the data.'),
+    //'custom_field'   => __('Error updating custom field.'),
+    ]
+    ];
 
-$message = ($updateMessages[$status][$field] ?? $updateMessages[$status]['_default_message']);
+    $message = ($updateMessages[$status][$field] ?? $updateMessages[$status]['_default_message']);
 
-return (is_string($message)) ? $message : 'Error!';
-}
- */
+    return (is_string($message)) ? $message : 'Error!';
+    }
+     */
 
+    public function refreshData($value)
+    {
+        switch($value['state'] ?? null){
+            case 'delete':
+                $title_value = __('Note Deleted');
+                $description_value = __('Note Has Been Deleted!!');
+                break;
+            case 'save':
+                $title_value = __('Note Saved');
+                $description_value = __('Note Has Been Saved!!');
+                break;
+            case 'update':
+                $title_value = __('Note Update');
+                $description_value = __('Note Has Been Updated!!');
+                break;
+            default :
+                $title_value = null;
+                $description_value = null;
+                break;
+        }
+        if($title_value != null && $description_value != null){
+            $this->notification()->success(
+                $title = $title_value,
+                $description = $description_value
+            );
+        }
+        $this->fillData();
+    }
 
- public function refreshData()
- {
-    $this->notification()->success(
-        $title = __('Note Saved'),
-        $description = __('Note Has Been Saved!!')
-    );
-    $this->fillData();
- }
+    // public function delete($id)
+    // {
+
+    //     // $this->emitUp('delete', ['id' => $id]);
+    //     // Todo::find($id)->delete();
+
+    //     // $this->emit('data-changed', ['state' => 'delete']);
+    // }
+
+    // public function edit($value)
+    // {
+    //     $this->emitUp('edit', ['id' => $value['id']]);
+    // }
 }

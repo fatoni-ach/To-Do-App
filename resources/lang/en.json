@@ -4,5 +4,15 @@
     "Note Saved" : "Note Saved",
     "Note Has Been Saved!!": "Note Has Been Saved !!",
     
-    "Description": "Description"
+    "Are you Sure?": "Are you Sure?",
+    "Delete the Note?": "Delete the Note",
+    "Yes": "Yes",
+    "Cancel" : "Cancel",
+    "No": "No",
+
+    "Description": "Description",
+    "Update": "Update",
+    "Delete": "Delete",
+    "Edit": "Edit",
+    "Save": "Save"
 }

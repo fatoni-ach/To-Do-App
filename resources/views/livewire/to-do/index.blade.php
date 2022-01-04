@@ -11,13 +11,17 @@
                 <div>
                     <div class="flex space-x">
                         <button onclick="$openModal('modalCreate')" wire:loading.attr="disabled"
-                            class="inline-flex items-center px-4 py-2 bg-blue-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                            class="bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm">
                             {{ __('Create') }}
                         </button>
                     </div>
                     <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                         {{-- <div class="inline-block min-w-full shadow rounded-lg overflow-hidden"> --}}
                         @livewire('to-do-table')
+
+                        {{-- <button class="bg-indigo-500 cursor-pointer text-white px-1 py-2.5 m-1 rounded text-sm">edit</button>
+                        <button class="bg-red-500 cursor-pointer text-white px-1 py-2 m-1 rounded text-sm">delete</button>
+                        <x-icon name="trash" class="w-5 h-5" /> --}}
 
                         {{-- </div> --}}
                     </div>
@@ -35,8 +39,24 @@
             <div class="flex justify-end gap-x-4">
                 {{-- <x-button flat negative label="Delete" wire:click="delete" /> --}}
                 <div class="flex">
-                    <x-button flat label="Cancel" x-on:click="close" class="mr-3" />
-                    <x-button primary label="Save" wire:click.prevent=create() />
+                    <x-button flat label="{{__('Cancel')}}" x-on:click="close" class="mr-3" />
+                    <x-button primary label="{{__('Save')}}" wire:click.prevent=create() />
+                </div>
+            </div>
+        </x-slot>
+    </x-modal.card>
+
+    <x-modal.card title="{{ __('Update') }}" fullscreeen blur wire:model.defer="modalUpdate">
+        <div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+            <x-textarea wire:model.lazy='description' label="Description" placeholder="write your Note" />
+        </div>
+
+        <x-slot name="footer">
+            <div class="flex justify-end gap-x-4">
+                {{-- <x-button flat negative label="Delete" wire:click="delete" /> --}}
+                <div class="flex">
+                    <x-button flat label="{{__('Cancel')}}" x-on:click="close" class="mr-3" />
+                    <x-button primary label="{{__('Save')}}" wire:click.prevent=update() />
                 </div>
             </div>
         </x-slot>

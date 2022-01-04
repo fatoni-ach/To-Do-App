@@ -5,5 +5,15 @@
     "Note Saved": "Catatan Disimpan",
     "Note Has Been Saved!!": "Catatan Berhasil Di Simpan !!",
 
-    "Create": "Tambahkan"
+    "Are you Sure?": "Apakah Kamu Yakin?",
+    "Delete the Note?": "Menghapus Catatan ini",
+    "Yes"   : "Ya",
+    "Cancel" : "Batal",
+    "No"    : "Tidak",
+
+    "Create": "Tambahkan",
+    "Update": "Perbarui",
+    "Delete": "Hapus",
+    "Edit": "Perbarui",
+    "Save": "Simpan"
 }
