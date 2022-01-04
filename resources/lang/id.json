@@ -1,3 +1,9 @@
 {
-    "Results" : "Hasil"
+    "Results": "Hasil",
+
+    "Description": "Deskripsi",
+    "Note Saved": "Catatan Disimpan",
+    "Note Has Been Saved!!": "Catatan Berhasil Di Simpan !!",
+
+    "Create": "Tambahkan"
 }
