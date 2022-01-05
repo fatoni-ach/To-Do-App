@@ -10,8 +10,11 @@
     "Profile" : "Profil",
     "Log Out" : "Keluar",
     "Edit" : "Edit",
+    "Search in" : "Cari di",
+    "of" : "dari",
 
 
+    "Manage Account" : "Kelola Akun",
     "Profile Information": "Informasi Profil",
     "Update your account's profile information and email address." : "Perbarui informasi profil akun dan E-mail kamu",
     "Update Password" : "Perbarui Kata Sandi",
@@ -21,6 +24,14 @@
     "Browser Sessions" : "Sesi Peramban",
     "Manage and log out your active sessions on other browsers and devices.": "Kelola dan keluar dari sesi aktif kamu di browser dan perangkat lain.",
     "Delete Account" : "Hapus Akun",
-    "Permanently delete your account." : "Menghapus akun kamu secara permanen"
+    "Permanently delete your account." : "Menghapus akun kamu secara permanen",
 
+
+
+    "You have not enabled two factor authentication." : "Anda belum mengaktifkan otentikasi dua faktor.",
+    "When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application.":    "Saat otentikasi dua faktor diaktifkan, Kamu akan dimintai token acak yang aman selama otentikasi. Kamu dapat mengambil token ini dari aplikasi Google Authenticator ponsel Kamu.",
+    "Enable" : "Aktifkan",
+    "If necessary, you may log out of all of your other browser sessions across all of your devices. Some of your recent sessions are listed below; however, this list may not be exhaustive. If you feel your account has been compromised, you should also update your password." : "Jika perlu, Kamu dapat keluar dari semua sesi browser lainnya di semua perangkat Kamu. Beberapa sesi terakhir Kamu tercantum di bawah ini; namun, daftar ini mungkin tidak lengkap. Jika Kamu merasa akun Kamu telah disusupi, Kamu juga harus memperbarui kata sandi Kamu.",
+    "Log Out Other Browser Sessions" :"Keluar Dari Sesi Peramban Lain",
+    "Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.": "Sekali saja akun kamu dihapus. Semua data dan resource akan secara Permanen akan dihapus. Sebelum menghapus akun kamu, mohon untuk mendownload data atau informasi yang ingin kamu amankan."
 }
