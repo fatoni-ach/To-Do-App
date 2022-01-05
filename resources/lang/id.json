@@ -1,3 +1,26 @@
 {
-    "Results" : "Hasil"
+    "Results" : "Hasil",
+    "Create" : "Tambahkan",
+    "Update" : "Perbarui",
+    "Delete" : "Hapus",
+    "Yes"   : "Ya",
+    "No"    : "Tidak",
+    "Are you sure?" : "Apakah kamu yakin?",
+    "Description" : "Deskripsi",
+    "Profile" : "Profil",
+    "Log Out" : "Keluar",
+    "Edit" : "Edit",
+
+
+    "Profile Information": "Informasi Profil",
+    "Update your account's profile information and email address." : "Perbarui informasi profil akun dan E-mail kamu",
+    "Update Password" : "Perbarui Kata Sandi",
+    "Ensure your account is using a long, random password to stay secure." : "Pastikan akun kamu menggunakan kata sandi panjang, acak untuk tetap aman",
+    "Two Factor Authentication" : "Dua Faktor Otentikasi",
+    "Add additional security to your account using two factor authentication." : "Tambahkan keamanan tambahan ke akun kamu menggunakan otentikasi dua faktor.",
+    "Browser Sessions" : "Sesi Peramban",
+    "Manage and log out your active sessions on other browsers and devices.": "Kelola dan keluar dari sesi aktif kamu di browser dan perangkat lain.",
+    "Delete Account" : "Hapus Akun",
+    "Permanently delete your account." : "Menghapus akun kamu secara permanen"
+
 }

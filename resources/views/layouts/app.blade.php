@@ -43,8 +43,8 @@
 
         @stack('modals')
 
-        <script src="{{ asset('js/trix.js') }}"></script>
-        <script src="{{ asset('js/trix-core.js') }}"></script>
+        {{-- <script src="{{ asset('js/trix.js') }}"></script>
+        <script src="{{ asset('js/trix-core.js') }}"></script> --}}
 
         @livewireScripts
     </body>
